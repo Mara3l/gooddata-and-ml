@@ -1,0 +1,16 @@
+input_features:
+  - name: distance_from_home
+    type: number
+  - name: distance_from_last_transaction
+    type: number
+  - name: ratio_to_median_purchase_price
+    type: number
+  - name: used_chip
+    type: binary
+  - name: used_pin_number
+    type: binary
+  - name: online_order
+    type: binary
+output_features:
+  - name: fraud
+    type: binary

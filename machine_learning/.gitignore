@@ -1,0 +1,6 @@
+.lock_preprocessing
+*.meta.json
+*.test.hdf5
+*.training.hdf5
+*.validation.hdf5
+results
