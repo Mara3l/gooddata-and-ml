@@ -34,8 +34,7 @@ $ deactivate
 export GOODDATA_HOST=<gooddata-uri>
 export GOODDATA_TOKEN=<gooddata-api-token>
 export WORKSPACE_ID=<workspace-id>
-export TRAINING_DATASET_ID=<training-dataset-id>
-export VALIDATION_DATASET_ID=<validation-dataset-id>
+export INSIGHT_ID=<insight-id>
 ```
 
 ### Install dependencies
@@ -55,3 +54,13 @@ $ python gooddata_data_fetch.py
 The similar approach applies also for other scripts. 
 
 Note: you have to first run `train_model.py` to successfully run `prediction.py`.
+
+## Troubleshooting 
+
+The whole project was built on macOS. It is possible that it will not be working on other systems.
+
+It may fail import some libraries, try to install `libomp`:
+
+```bash
+$ brew install libomp 
+```
