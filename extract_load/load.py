@@ -21,20 +21,30 @@ conn = psycopg2.connect(
 conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
 
 
-def load_data(data):
+def load_data(stock_data):
     loaded = False
     try:
         cur = conn.cursor()
         cur.execute(
             """
-            create table if not exists input_stage.weather(
+            create table if not exists input_stage.stock(
                 id serial,
+                symbol varchar,
+                date date,
                 data jsonb
             )
             """
         )
-        for item in data:
-            cur.execute("insert into input_stage.weather(data) values (%s)", [Json(item)])
+        for item in stock_data["data"]:
+            print(stock_data["data"][item])
+            cur.execute(
+                "insert into input_stage.stock(symbol, date, data) values (%s, %s, %s)",
+                [
+                    stock_data["symbol"],
+                    item,
+                    Json(stock_data["data"][item])
+                ]
+            )
         conn.commit()
         conn.close()
         loaded = True

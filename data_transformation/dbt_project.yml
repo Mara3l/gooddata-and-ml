@@ -34,8 +34,3 @@ models:
   data_transformation:
     +schema: output_stage
     +materialized: table
-
-seeds:
-  fraud:
-    +database: fraud
-    +schema: input_stage

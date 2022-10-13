@@ -1,8 +1,6 @@
 # Data transformation
 
-The `data_transformation` folder contains the dbt tool that is responsible for loading and transforming data.
-
-The folder `seeds` is the CSV file `card_transdata.csv` that contains demo data. Firstly, dbt loads demo data into the database and then transforms it.
+The `data_transformation` folder contains the dbt tool that is responsible for transforming data.
 
 If you want to learn more about dbt, I encourage you to read the [documentation](https://docs.getdbt.com/).
 
@@ -12,13 +10,7 @@ In order to successfully run dbt, you have to set up correct database credential
 
 ## Getting started
 
-### Seed data
-
-The following command loads data into the database schema `input_stage`:
-
-```bash
-$ dbt seed --full-refresh
-```
+The prerequisite is to have data loaded in the database schema `input_stage`. If you do not have, please check the `extract_load` folder.
 
 ### Run dbt
 

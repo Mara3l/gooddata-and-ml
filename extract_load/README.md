@@ -34,9 +34,7 @@ $ deactivate
 
 ```bash
 export RAPID_API_TOKEN=<gooddata-uri>
-export WEATHER_STATION_ID=<wather-station-id>
-export DATE_FROM=<date-from>
-export DATE_TO=<date-to>
+export STOCK_SYMBOL=<stock-symbol>
 export POSTGRES_HOST=<postgres-host>
 export POSTGRES_PORT=<postgres-port>
 export POSTGRES_USER=<postgres-user>
