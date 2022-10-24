@@ -4,7 +4,7 @@
 
 Every part is responsible just for one thing, and data flows from the beginning (extract and load) to the end (machine learning).
 
-![Architecture Overview](img.png)
+![Architecture Overview](images/architecture.png)
 
 You can find details in single folders:
 
