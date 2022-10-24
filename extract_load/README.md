@@ -2,8 +2,6 @@
 
 The `extract_load` folder contains python scripts to extract and load data into the database.
 
-The data is extracted from the [Meteostat API](https://rapidapi.com/meteostat/api/meteostat).
-
 ## Getting started
 
 ### Setup virtual environment
@@ -46,7 +44,7 @@ export POSTGRES_INPUT_SCHEMA=<input-stage-schema>
 ### Install dependencies
 
 ```bash
-$ pip install -r requirements.txt
+$ pip install psycopg2
 ```
 
 ### Run scripts

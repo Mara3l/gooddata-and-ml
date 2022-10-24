@@ -6,20 +6,18 @@ from pycaret.regression import *
 host = os.environ["GOODDATA_HOST"]
 token = os.environ["GOODDATA_TOKEN"]
 workspace = os.environ["WORKSPACE_ID"]
-insight = os.environ["INSIGHT_ID"]
+report = os.environ["REPORT_ID"]
 
 gp = GoodPandas(host, token)
 frames = gp.data_frames(workspace)
 
-insight_data = frames.for_insight(insight)
+report_data = frames.for_insight(report)
 
-print(insight_data)
+print(report_data)
 
-s = setup(insight_data, target="close")
+s = setup(report_data, target="close")
 
 best = compare_models()
 
-predict_model(best)
-
-predictions = predict_model(best, data=insight_data)
+predictions = predict_model(best, data=report_data)
 print(predictions.head())

@@ -34,13 +34,14 @@ $ deactivate
 export GOODDATA_HOST=<gooddata-uri>
 export GOODDATA_TOKEN=<gooddata-api-token>
 export WORKSPACE_ID=<workspace-id>
-export INSIGHT_ID=<insight-id>
+export REPORT_ID=<report-id>
 ```
 
 ### Install dependencies
 
 ```bash
-$ pip install -r requirements.txt
+$ pip install gooddata-pandas
+$ pip install pycaret
 ```
 
 ### Run scripts
@@ -48,12 +49,8 @@ $ pip install -r requirements.txt
 If you want to fetch data, just run:
 
 ```bash
-$ python gooddata_data_fetch.py
+$ python main.py
 ```
-
-The similar approach applies also for other scripts. 
-
-Note: you have to first run `train_model.py` to successfully run `prediction.py`.
 
 ## Troubleshooting 
 
